@@ -140,8 +140,8 @@ combined = combined.merge(case_death, on=['state', 'date'], how='outer')
 combined.sort_values(by=['date', 'state'], inplace=True, ignore_index=True)
 
 # and output the data
-outfile_name = f"data/{datetime.datetime.now(pytz.timezone('US/Eastern')).strftime('%Y%m%d')}.csv"
+# outfile_name = f"data/{datetime.datetime.now(pytz.timezone('US/Eastern')).strftime('%Y%m%d')}.csv"
 if "STDOUT" in sys.argv[1:]:  # allow optional output to STDOUT instead of a file
     outfile_name = sys.stdout
-combined.to_csv(outfile_name, index=False)
+# combined.to_csv(outfile_name, index=False)
 combined.to_csv("data/current.csv", index=False)
