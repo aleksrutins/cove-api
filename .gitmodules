@@ -1,0 +1,3 @@
+[submodule "cove-data"]
+	path = cove-data
+	url = https://github.com/aleksrutins/cove-data
